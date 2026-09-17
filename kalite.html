@@ -32,11 +32,23 @@
 
         <!-- Icons (Deferred for speed) -->
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
 </head>
 <body>
 
     <!-- ================= HEADER ================= -->
     <header class="main-header" id="header">
+
+    <div class="top-bar-contact">
+        <div class="container">
+            <div class="top-bar-right">
+                <a href="tel:+902128866464"><i class="ph ph-phone"></i> <span dir="ltr">+90 212 886 64 64</span></a>
+                <a href="mailto:info@bilesimkimya.com"><i class="ph ph-envelope"></i> info@bilesimkimya.com</a>
+            </div>
+        </div>
+    </div>
+
         <div class="container header-container">
             <!-- Left: Logo & Nav -->
             <div class="header-left">
@@ -52,7 +64,6 @@
                     <li><a href="uretim.html" data-i18n="nav_production">Üretim</a></li>
                     <li><a href="markalar.html" data-i18n="nav_brands">Markalar</a></li>
                     <li><a href="cozumler.html" data-i18n="nav_solutions">Çözümler</a></li>
-                    <li><a href="privatelabel.html" data-i18n="nav_privatelabel">Private Label</a></li>
                     <li><a href="arge.html" data-i18n="nav_rnd">Ar-Ge</a></li>
                     <li><a href="kalite.html" data-i18n="nav_quality">Kalite & Standartlar</a></li>
                     <li><a href="haberler.html" data-i18n="nav_news">Haberler</a></li>
@@ -66,10 +77,10 @@
                 <div class="lang-switcher">
                     <button class="current-lang" id="langBtn">TR <i class="ph ph-caret-down"></i></button>
                     <ul class="lang-dropdown" id="langDropdown">
-                        <li data-lang="tr">Türkçe (TR)</li>
-                        <li data-lang="en">English (EN)</li>
-                        <li data-lang="ar">العربية (AR)</li>
-                        <li data-lang="ru">Русский (RU)</li>
+                        <li data-lang="tr"><span class="fi fi-tr"></span> Türkçe (TR)</li>
+                        <li data-lang="en"><span class="fi fi-gb"></span> English (EN)</li>
+                        <li data-lang="ar"><span class="fi fi-sa"></span> العربية (AR)</li>
+                        <li data-lang="ru"><span class="fi fi-ru"></span> Русский (RU)</li>
                     </ul>
                 </div>
                 
@@ -95,13 +106,18 @@
             <li><a href="uretim.html" data-i18n="nav_production">Üretim</a></li>
             <li><a href="markalar.html" data-i18n="nav_brands">Markalar</a></li>
             <li><a href="cozumler.html" data-i18n="nav_solutions">Çözümler</a></li>
-            <li><a href="privatelabel.html" data-i18n="nav_privatelabel">Private Label</a></li>
             <li><a href="arge.html" data-i18n="nav_rnd">Ar-Ge</a></li>
             <li><a href="kalite.html" data-i18n="nav_quality">Kalite & Standartlar</a></li>
             <li><a href="haberler.html" data-i18n="nav_news">Haberler</a></li>
             <li><a href="iletisim.html" class="mobile-cta" data-i18n="nav_b2b_cta">B2B Teklif Al</a></li>
         </ul>
-    </div>
+                <div class="mobile-socials">
+            <a href="https://www.facebook.com/bilesim.kimya.52" target="_blank" aria-label="Facebook" class="social-fb"><i class="ph-fill ph-facebook-logo" style="color: #1877F2;"></i></a>
+            <a href="https://www.instagram.com/bilesim_kimya/?hl=tr" target="_blank" aria-label="Instagram" class="social-ig"><i class="ph-fill ph-instagram-logo" style="color: #E4405F;"></i></a>
+            <a href="https://www.youtube.com/channel/UCOIuuULRxFuS6cFB8bP_mrQ" target="_blank" aria-label="YouTube" class="social-yt"><i class="ph-fill ph-youtube-logo" style="color: #FF0000;"></i></a>
+            <a href="https://www.linkedin.com/company/bile%C5%9Fim-kimya-temizlik-%C3%BCr%C3%BCnleri-sanayi-ticaret-limited-%C5%9Firketi/" target="_blank" aria-label="LinkedIn" class="social-li"><i class="ph-fill ph-linkedin-logo" style="color: #0A66C2;"></i></a>
+        </div>
+</div>
 
     <!-- ================= KALİTE HERO ================= -->
     <section class="hero-section" style="display: flex; align-items: center; justify-content: center; text-align: center;">
@@ -203,19 +219,22 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4 data-i18n="footer_solutions">Çözümler</h4>
+                    <h4 data-i18n="nav_brands">Markalar</h4>
                     <ul>
-                        <li><a href="privatelabel.html" data-i18n="nav_privatelabel">Private Label</a></li>
-                        <li><a href="markalar.html">Sio</a></li>
-                        <li><a href="markalar.html">Biotol</a></li>
-                        <li><a href="markalar.html">Vione</a></li>
-                        <li><a href="markalar.html">V-One</a></li>
+                        <li><a href="http://sio.web.tr" target="_blank">Sio</a></li>
+                        <li><a href="http://biotol.com.tr" target="_blank">Biotol</a></li>
+                        <li><a href="http://vione.com.tr" target="_blank">Vione</a></li>
+                        <li><a href="http://v1.com.tr" target="_blank">V-One</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-map" style="width: 100%;">
-                    <h4 data-i18n="footer_map_title" style="margin-bottom: 1.5rem; color: #ffffff; font-family: var(--font-primary); font-size: 1.25rem; font-weight: 700;">Lokasyon</h4>
-                    <div style="border-radius: 12px; overflow: hidden; height: 160px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                                <div class="footer-map" style="width: 100%;">
+                    <h4 style="margin-bottom: 1.5rem; color: #ffffff; font-family: var(--font-primary); font-size: 1.25rem; font-weight: 700;" data-i18n="footer_contact">İletişim</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="ph ph-phone" style="color: var(--color-brand-red); font-size: 1.2rem;"></i> <a href="tel:+902128866464" style="color: inherit; text-decoration: none; transition: color 0.3s;"><span dir="ltr">+90 212 886 64 64</span></a></li>
+                        <li style="margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="ph ph-envelope" style="color: var(--color-brand-red); font-size: 1.2rem;"></i> <a href="mailto:info@bilesimkimya.com" style="color: inherit; text-decoration: none; transition: color 0.3s;">info@bilesimkimya.com</a></li>
+                    </ul>
+                    <div class="footer-map-wrapper">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.648109031853!2d28.626088999999997!3d41.032954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f4de3abffeb%3A0xf0a99316ff70ee8f!2zQmlsZcWfaW0gS2lteWEgQS7Fni4!5e0!3m2!1str!2str!4v1789566746828!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
@@ -225,6 +244,7 @@
                 <p>&copy; 2026 Bileşim Kimya San. ve Tic. A.Ş. <span data-i18n="footer_rights">Tüm Hakları Saklıdır.</span></p>
                 <div class="legal-links">
                     <a href="#" onclick="openModal('privacyModal'); return false;" data-i18n="footer_privacy">Gizlilik Politikası</a>
+                    <a href="#" onclick="openModal('cookieModal'); return false;" data-i18n="footer_cookie">Çerez Politikası</a>
                     <a href="#" onclick="openModal('kvkkModal'); return false;" data-i18n="footer_kvkk">KVKK</a>
                 </div>
             </div>
@@ -232,7 +252,21 @@
     </footer>
 
     <!-- ================= MODALS ================= -->
-    <div class="custom-modal" id="privacyModal">
+    
+    <div class="custom-modal" id="cookieModal">
+        <div class="modal-overlay" onclick="closeModal('cookieModal')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('cookieModal')"><i class="ph ph-x"></i></button>
+            <h3 data-i18n="footer_cookie">Çerez Politikası</h3>
+            <div class="modal-body">
+                <p>Bileşim Kimya web sitesi, kullanıcı deneyimini geliştirmek ve site ziyaretçilerine daha iyi hizmet sunmak amacıyla çerezler (cookies) kullanmaktadır.</p>
+                <p>Zorunlu çerezler sitenin temel işlevleri için gereklidir. Performans ve analiz çerezleri ise sitemizi nasıl kullandığınızı anlayarak geliştirmemize yardımcı olur.</p>
+                <p>Tarayıcınızın ayarlarından çerezleri dilediğiniz zaman yönetebilir veya devre dışı bırakabilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+
+<div class="custom-modal" id="privacyModal">
         <div class="modal-overlay" onclick="closeModal('privacyModal')"></div>
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('privacyModal')"><i class="ph ph-x"></i></button>
@@ -264,5 +298,89 @@
         <!-- Scripts -->
     <script defer src="js/i18n.js"></script>
     <script defer src="js/main.js"></script>
+
+    
+    <!-- Cookie Overlay (Blocks interaction) -->
+    <div id="cookieConsentOverlay" class="cookie-overlay"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-inner container">
+            <div class="cookie-consent-content">
+                <i class="ph-fill ph-cookie cookie-icon"></i>
+                <p>Sitemizin işlevselliği için çerezler kullanılmaktadır. Teknik olarak tutulması gerekmeyen ancak size daha iyi kullanıcı tecrübesi ve kişiye özel teklif sunmamıza, internet trafiğimizi analiz etmemize ve sosyal medya özellikleri sağlamamıza izin veren çerezler bulunmaktadır ve bunlar ancak onay vermeniz halinde kullanılacaktır.</p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button class="btn-cookie-outline" onclick="openCookieSettings()"><i class="ph ph-sliders-horizontal"></i> Tercihleri Özelleştir</button>
+                <button class="btn-cookie-outline" onclick="saveCookies('essential')"><i class="ph ph-shield-check"></i> Yalnızca Zorunlu</button>
+                <button class="btn-cookie-primary" onclick="saveCookies('all')"><i class="ph ph-check"></i> Hepsini Kabul Et</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cookie Button -->
+    <button id="floatingCookieBtn" class="floating-cookie-btn" onclick="openCookieSettings()" aria-label="Çerez Politikası">
+        <i class="ph ph-cookie"></i>
+    </button>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieSettingsModal" class="cookie-settings-modal">
+        <div class="cookie-settings-content">
+            <div class="cookie-settings-header">
+                <h3><i class="ph-fill ph-cookie"></i> Çerez Tercihleri</h3>
+                <button class="cookie-settings-close" onclick="closeCookieSettings()"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="cookie-settings-body">
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-shield-check" style="color: var(--color-brand-red);"></i> Zorunlu Çerezler <span class="badge-essential">Her zaman aktif</span></h4>
+                        <p>Oturum yönetimi, güvenlik ve temel işlevler. Devre dışı bırakılamaz.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider round disabled"></span>
+                    </label>
+                </div>
+                
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-chart-line" style="color: var(--color-brand-red);"></i> Analitik Çerezler</h4>
+                        <p>Sayfa görüntülemeleri, ziyaretçi kaynakları ve kullanıcı davranışı ölçümü.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggleAnalytics">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-megaphone" style="color: var(--color-brand-red);"></i> Pazarlama & Reklam Çerezleri</h4>
+                        <p>Reklam performansı ve yeniden hedefleme.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggleMarketing">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-headset" style="color: var(--color-brand-red);"></i> Destek Araçları</h4>
+                        <p>Canlı müşteri destek sohbet aracı widget'ı.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggleSupport">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-settings-footer">
+                <button class="btn-cookie-primary w-100" style="width: 100%; justify-content: center;" onclick="saveCustomCookies()">Seçimi Kaydet</button>
+            </div>
+        </div>
+    </div>
+    <!-- Page Transitions -->
+    <script src="js/page-transition.js"></script>
 </body>
 </html>

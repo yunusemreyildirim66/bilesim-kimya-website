@@ -14,13 +14,26 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"></noscript>
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chatbot.css">
     
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Flag Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
 </head>
 <body>
 
     <!-- ================= HEADER ================= -->
     <header class="main-header" id="header">
+
+    <div class="top-bar-contact">
+        <div class="container">
+            <div class="top-bar-right">
+                <a href="tel:+902128866464"><i class="ph ph-phone"></i> <span dir="ltr">+90 212 886 64 64</span></a>
+                <a href="mailto:info@bilesimkimya.com"><i class="ph ph-envelope"></i> info@bilesimkimya.com</a>
+            </div>
+        </div>
+    </div>
+
         <div class="container header-container">
             <div class="header-left">
             <a href="index.html" class="logo-link">
@@ -32,7 +45,6 @@
                     <li><a href="uretim.html" data-i18n="nav_production">Üretim</a></li>
                     <li><a href="markalar.html" data-i18n="nav_brands">Markalar</a></li>
                     <li><a href="cozumler.html" data-i18n="nav_solutions">Çözümler</a></li>
-                    <li><a href="privatelabel.html" data-i18n="nav_privatelabel">Private Label</a></li>
                     <li><a href="arge.html" data-i18n="nav_rnd">Ar-Ge</a></li>
                     <li><a href="kalite.html" data-i18n="nav_quality">Kalite & Standartlar</a></li>
                     <li><a href="haberler.html" data-i18n="nav_news">Haberler</a></li>
@@ -43,8 +55,8 @@
                 <div class="lang-switcher">
                     <button class="current-lang" id="langBtn">TR <i class="ph ph-caret-down"></i></button>
                     <ul class="lang-dropdown" id="langDropdown">
-                        <li data-lang="tr">Türkçe (TR)</li>
-                        <li data-lang="en">English (EN)</li>
+                        <li data-lang="tr"><span class="fi fi-tr"></span> Türkçe (TR)</li>
+                        <li data-lang="en"><span class="fi fi-gb"></span> English (EN)</li>
                     </ul>
                 </div>
                 <a href="iletisim.html" class="btn btn-primary" data-i18n="nav_b2b_cta">B2B Teklif Al</a>
@@ -62,13 +74,12 @@
             <button class="close-menu" id="closeMenu"><i class="ph ph-x"></i></button>
         </div>
         <ul class="mobile-nav-list">
-            <li><a href="kurumsal.html">Kurumsal</a></li>
-            <li><a href="uretim.html">Üretim</a></li>
+            <li><a href="kurumsal.html" data-i18n="nav_about">Hakkımızda</a></li>
+            <li><a href="uretim.html" data-i18n="nav_production">Üretim</a></li>
             <li><a href="markalar.html">Markalar</a></li>
             <li><a href="cozumler.html">Çözümler</a></li>
-            <li><a href="privatelabel.html">Private Label</a></li>
-            <li><a href="arge.html">Ar-Ge</a></li>
-            <li><a href="kalite.html">Kalite & Standartlar</a></li>
+            <li><a href="arge.html" data-i18n="nav_rnd">Ar-Ge</a></li>
+            <li><a href="kalite.html" data-i18n="nav_quality">Kalite Belgeleri</a></li>
             <li><a href="haberler.html">Haberler</a></li>
             <li><a href="iletisim.html" class="mobile-cta">B2B Teklif Al</a></li>
         </ul>
@@ -106,43 +117,41 @@
 
                     <!-- Share -->
                     <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--color-gray-200); display: flex; align-items: center; gap: 1rem;">
-                        <span style="font-weight: 600; color: var(--color-brand-blue-dark);">Haberi Paylaş:</span>
-                        <div class="social-links" style="display: flex; gap: 0.5rem;">
-                            <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-gray-100); color: var(--color-gray-600); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; transition: all 0.3s ease;"><i class="ph ph-linkedin-logo"></i></a>
-                            <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-gray-100); color: var(--color-gray-600); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; transition: all 0.3s ease;"><i class="ph ph-twitter-logo"></i></a>
-                            <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-gray-100); color: var(--color-gray-600); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; transition: all 0.3s ease;"><i class="ph ph-facebook-logo"></i></a>
+                        <span style="font-weight: 600; color: var(--color-brand-blue-dark); line-height: 1; margin-top: 2px;">Haberi Paylaş:</span>
+                        <div class="social-links" style="display: flex; gap: 0.5rem; align-items: center;">
+                            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Sidebar: Recent News -->
-                <aside style="flex: 0 0 320px;">
-                    <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 12px;">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--color-brand-blue-dark); margin-bottom: 2rem; border-bottom: 2px solid var(--color-brand-red); padding-bottom: 0.5rem; display: inline-block;">Benzer Haberler</h4>
+                <aside class="news-sidebar">
+                    <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 12px; width: 100%;">
+                        <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--color-brand-blue-dark); margin-bottom: 2rem; border-bottom: 2px solid var(--color-brand-red); padding-bottom: 0.5rem; display: inline-block;"><span data-i18n="news_similar">Benzer Haberler</span></h4>
                         
                         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                             <!-- Sidebar Item 1 -->
-                            <a href="haber-detay.html?id=2" style="display: flex; gap: 1rem; text-decoration: none; group">
+                            <a href="haber-detay.html#id=2" style="display: flex; gap: 1rem; text-decoration: none; group">
                                 <div style="width: 80px; height: 80px; border-radius: 8px; background: url('stat_capacity.jpg') center/cover; flex-shrink: 0;"></div>
                                 <div>
-                                    <h5 style="font-size: 0.95rem; font-weight: 600; color: var(--color-brand-blue-dark); line-height: 1.4; margin-bottom: 0.5rem; transition: color 0.3s ease;" class="hover-red">Yıllık 120.000 Ton Kapasiteye Ulaşan Tesis...</h5>
-                                    <span style="font-size: 0.8rem; color: var(--color-gray-500);"><i class="ph ph-calendar-blank"></i> 05 Eyl 2026</span>
+                                    <h5 id="sidebar-title-2" style="font-size: 0.95rem; font-weight: 600; color: var(--color-brand-blue-dark); line-height: 1.4; margin-bottom: 0.5rem; transition: color 0.3s ease;" class="hover-red"></h5><span id="sidebar-date-2" style="font-size: 0.8rem; color: var(--color-gray-500);"></span>
                                 </div>
                             </a>
                             <!-- Sidebar Item 2 -->
-                            <a href="haber-detay.html?id=3" style="display: flex; gap: 1rem; text-decoration: none;">
+                            <a href="haber-detay.html#id=3" style="display: flex; gap: 1rem; text-decoration: none;">
                                 <div style="width: 80px; height: 80px; border-radius: 8px; background: url('stat_brands.jpg') center/cover; flex-shrink: 0;"></div>
                                 <div>
-                                    <h5 style="font-size: 0.95rem; font-weight: 600; color: var(--color-brand-blue-dark); line-height: 1.4; margin-bottom: 0.5rem; transition: color 0.3s ease;" class="hover-red">Vione ve Biotol Markalarımızda Eko-Dostu...</h5>
-                                    <span style="font-size: 0.8rem; color: var(--color-gray-500);"><i class="ph ph-calendar-blank"></i> 22 Ağu 2026</span>
+                                    <h5 id="sidebar-title-3" style="font-size: 0.95rem; font-weight: 600; color: var(--color-brand-blue-dark); line-height: 1.4; margin-bottom: 0.5rem; transition: color 0.3s ease;" class="hover-red"></h5><span id="sidebar-date-3" style="font-size: 0.8rem; color: var(--color-gray-500);"></span>
                                 </div>
                             </a>
                             <!-- Sidebar Item 3 -->
-                            <a href="haber-detay.html?id=6" style="display: flex; gap: 1rem; text-decoration: none;">
+                            <a href="haber-detay.html#id=6" style="display: flex; gap: 1rem; text-decoration: none;">
                                 <div style="width: 80px; height: 80px; border-radius: 8px; background: url('stat_certificates.jpg') center/cover; flex-shrink: 0;"></div>
                                 <div>
-                                    <h5 style="font-size: 0.95rem; font-weight: 600; color: var(--color-brand-blue-dark); line-height: 1.4; margin-bottom: 0.5rem; transition: color 0.3s ease;" class="hover-red">ISO 22716 GMP Sertifikamızı Başarıyla...</h5>
-                                    <span style="font-size: 0.8rem; color: var(--color-gray-500);"><i class="ph ph-calendar-blank"></i> 10 Tem 2026</span>
+                                    <h5 id="sidebar-title-6" style="font-size: 0.95rem; font-weight: 600; color: var(--color-brand-blue-dark); line-height: 1.4; margin-bottom: 0.5rem; transition: color 0.3s ease;" class="hover-red"></h5><span id="sidebar-date-6" style="font-size: 0.8rem; color: var(--color-gray-500);"></span>
                                 </div>
                             </a>
                         </div>
@@ -172,27 +181,30 @@
                 <div class="footer-links">
                     <h4 data-i18n="footer_links">Kurumsal</h4>
                     <ul>
-                        <li><a href="kurumsal.html">Hakkımızda</a></li>
-                        <li><a href="uretim.html">Üretim</a></li>
-                        <li><a href="arge.html">Ar-Ge</a></li>
-                        <li><a href="kalite.html">Kalite Belgeleri</a></li>
+                        <li><a href="kurumsal.html" data-i18n="nav_about">Hakkımızda</a></li>
+                        <li><a href="uretim.html" data-i18n="nav_production">Üretim</a></li>
+                        <li><a href="arge.html" data-i18n="nav_rnd">Ar-Ge</a></li>
+                        <li><a href="kalite.html" data-i18n="nav_quality">Kalite Belgeleri</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
-                    <h4 data-i18n="footer_solutions">Çözümler</h4>
+                    <h4 data-i18n="nav_brands">Markalar</h4>
                     <ul>
-                        <li><a href="privatelabel.html">Private Label</a></li>
-                        <li><a href="markalar.html">Sio</a></li>
-                        <li><a href="markalar.html">Biotol</a></li>
-                        <li><a href="markalar.html">Vione</a></li>
-                        <li><a href="markalar.html">V-One</a></li>
+                        <li><a href="http://sio.web.tr" target="_blank">Sio</a></li>
+                        <li><a href="http://biotol.com.tr" target="_blank">Biotol</a></li>
+                        <li><a href="http://vione.com.tr" target="_blank">Vione</a></li>
+                        <li><a href="http://v1.com.tr" target="_blank">V-One</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-map" style="width: 100%;">
-                    <h4 data-i18n="footer_map_title" style="margin-bottom: 1.5rem; color: #ffffff; font-family: var(--font-primary); font-size: 1.25rem; font-weight: 700;">Lokasyon</h4>
-                    <div style="border-radius: 12px; overflow: hidden; height: 160px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                                <div class="footer-map" style="width: 100%;">
+                    <h4 style="margin-bottom: 1.5rem; color: #ffffff; font-family: var(--font-primary); font-size: 1.25rem; font-weight: 700;" data-i18n="footer_contact">İletişim</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 1rem 0; font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="ph ph-phone" style="color: var(--color-brand-red); font-size: 1.2rem;"></i> <a href="tel:+902128866464" style="color: inherit; text-decoration: none; transition: color 0.3s;"><span dir="ltr">+90 212 886 64 64</span></a></li>
+                        <li style="margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.7);"><i class="ph ph-envelope" style="color: var(--color-brand-red); font-size: 1.2rem;"></i> <a href="mailto:info@bilesimkimya.com" style="color: inherit; text-decoration: none; transition: color 0.3s;">info@bilesimkimya.com</a></li>
+                    </ul>
+                    <div class="footer-map-wrapper">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.648109031853!2d28.626088999999997!3d41.032954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f4de3abffeb%3A0xf0a99316ff70ee8f!2zQmlsZcWfaW0gS2lteWEgQS7Fni4!5e0!3m2!1str!2str!4v1789566746828!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
@@ -201,8 +213,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Bileşim Kimya San. ve Tic. A.Ş. <span data-i18n="footer_rights">Tüm Hakları Saklıdır.</span></p>
                 <div class="legal-links">
-                    <a href="#">Gizlilik Politikası</a>
-                    <a href="#">KVKK</a>
+                    <a href="#" data-i18n="footer_privacy">Gizlilik Politikası</a>
+                    <a href="#" data-i18n="footer_kvkk">KVKK</a>
                 </div>
             </div>
         </div>
@@ -212,142 +224,140 @@
     <script defer src="js/chatbot.js"></script>
 
         <!-- Scripts -->
+    <script src="js/news-data.js"></script>
     <script defer src="js/i18n.js"></script>
     <script defer src="js/main.js"></script>
 
     <!-- News Dynamic Loader Script -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const newsData = {
-                "1": {
-                    category: "Fuar & Etkinlik",
-                    title: "Uluslararası Private Label Zirvesi'nde Yeni İş Birlikleri",
-                    date: "15 Ekim 2026",
-                    image: "hero_conference_hd.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Bileşim Kimya olarak, küresel pazar payımızı artırma hedefiyle katıldığımız Uluslararası Private Label Zirvesi'nden büyük başarılarla döndük. Global perakendecilerle yapılan görüşmelerde yeni fason üretim anlaşmaları imzalandı.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Avrupa ve Orta Doğu pazarının önde gelen zincir market temsilcileriyle gerçekleştirdiğimiz toplantılarda, yüksek üretim kapasitemiz ve <strong>GMP standartlarına</strong> uygun kalite politikamız büyük ilgi gördü. Temizlik kimyasalları ve kişisel bakım ürünleri kategorisindeki geniş ürün yelpazemiz, ziyaretçilerden tam not aldı.
-                              </p>
-                              <h3 style="font-size: 1.75rem; font-weight: 700; color: var(--color-brand-blue-dark); margin: 3rem 0 1.5rem;">Sürdürülebilir Üretim Vizyonu ve Ekolojik Ürünler</h3>
-                              <p style="margin-bottom: 1.5rem;">
-                                Fuar boyunca en çok dikkat çeken konulardan biri de doğada çözünebilir formülasyonlarımız ve <strong>%100 geri dönüştürülebilir ambalaj</strong> seçeneklerimiz oldu.
-                              </p>
-                              <blockquote style="border-left: 4px solid var(--color-brand-red); padding: 1rem 1.5rem; margin: 3rem 0; background: var(--color-gray-50); border-radius: 0 8px 8px 0; font-style: italic; font-size: 1.35rem; color: var(--color-gray-800); line-height: 1.6;">
-                                  "Global standartların ötesinde bir kalite anlayışıyla, Türkiye'nin üretim gücünü dünyanın dört bir yanına taşımaya devam edeceğiz."
-                              </blockquote>`
-                },
-                "2": {
-                    category: "Üretim & Yatırım",
-                    title: "Yıllık 120.000 Ton Kapasiteye Ulaşan Tesis Modernizasyonu",
-                    date: "05 Eylül 2026",
-                    image: "stat_capacity.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Yeni nesil dolum hatlarımızla üretim hızımızı ve kapasitemizi rekor seviyeye taşıdık. Üretim bandımız artık çok daha hızlı ve verimli.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Son teknoloji otomasyon sistemlerine yaptığımız yatırımlarla hata payını sıfıra indirirken, günlük üretim hacmimizi %40 oranında artırmayı başardık.
-                              </p>`
-                },
-                "3": {
-                    category: "İnovasyon & Ürün",
-                    title: "Vione ve Biotol Markalarımızda Eko-Dostu Ambalaj Dönemi",
-                    date: "22 Ağustos 2026",
-                    image: "stat_brands.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                %100 geri dönüştürülebilir ambalajlara geçiş sürecimizi hızlandırdık. Çevreye olan duyarlılığımızı üretim bantlarımıza taşıyoruz.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Tüketici alışkanlıklarının ekolojik yönde değişmesiyle birlikte, biz de sektör lideri olarak karbon ayak izimizi düşürüyor ve tamamen geri dönüştürülmüş plastik kullanıyoruz.
-                              </p>`
-                },
-                "4": {
-                    category: "Kurumsal",
-                    title: "Bileşim Kimya 20. Yılını Gururla Kutluyor",
-                    date: "14 Temmuz 2026",
-                    image: "stat_experience.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Sektördeki 20 yıllık deneyimimizi çalışanlarımız ve iş ortaklarımızla kutladık. Küçücük bir atölyeden dev bir tesise uzanan yolculuğumuz sürüyor.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Geride bıraktığımız 20 yılda kalitemizden ödün vermeden yüzlerce marka yarattık. Gelecekte de aynı azimle çalışmaya devam edeceğiz.
-                              </p>`
-                },
-                "5": {
-                    category: "Ar-Ge Merkezi",
-                    title: "Laboratuvarımız Yeni Ekipmanlarla Güçlendirildi",
-                    date: "30 Haziran 2026",
-                    image: "stat_personnel.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Yüksek teknoloji analiz cihazlarımızla kalite kontrol standartlarımızı daha da yukarı taşıdık.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Ar-Ge laboratuvarımıza eklediğimiz yeni nesil spektrometreler ile analiz sürelerimizi yarı yarıya düşürdük. Formülasyonlarımız artık çok daha yenilikçi.
-                              </p>`
-                },
-                "6": {
-                    category: "Kalite",
-                    title: "ISO 22716 GMP Sertifikamızı Başarıyla Yeniledik",
-                    date: "10 Temmuz 2026",
-                    image: "stat_certificates.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Uluslararası kozmetik iyi üretim uygulamaları denetimlerinden tam not aldık.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Üretim süreçlerimizin her adımında hijyen, izlenebilirlik ve sıfır hata prensibiyle çalıştığımızı uluslararası otoriteler nezdinde bir kez daha tescilledik.
-                              </p>`
-                },
-                "7": {
-                    category: "Global İhracat",
-                    title: "Afrika ve Güney Amerika Pazarlarında Güçleniyoruz",
-                    date: "18 Mayıs 2026",
-                    image: "rakamlarla-bilesim-70-ulke.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Yeni pazarlara açılma stratejimiz kapsamında önemli distribütörlük ağları kurduk. İhracat haritamız genişliyor.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Biotol ve Sio markalarımız, özellikle Güney Amerika pazarında raflarda yerini almaya başladı. Global marka olma yolunda sağlam adımlar atıyoruz.
-                              </p>`
-                },
-                "8": {
-                    category: "Sürdürülebilirlik",
-                    title: "Karbon Ayak İzinde %30 Azaltım Hedefine Ulaştık",
-                    date: "04 Nisan 2026",
-                    image: "pictureResizer.jpeg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Enerji verimliliği projelerimizle çevresel etkimizi minimize etmeye devam ediyoruz.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Fabrikamızın çatısına kurulan güneş panelleri ve atık su arıtma tesisimizin modernizasyonu ile doğaya verdiğimiz sözü tutuyoruz.
-                              </p>`
-                },
-                "9": {
-                    category: "Markalarımız",
-                    title: "Sio Markası Ev Temizliğinde Yeni Serisini Tanıttı",
-                    date: "12 Mart 2026",
-                    image: "markalarimiz-resim-yeni.jpg",
-                    content: `<p style="font-size: 1.3rem; font-weight: 500; color: var(--color-brand-blue-dark); margin-bottom: 2rem;">
-                                Konsantre formüllü yeni ürün yelpazemiz tüketicilerden yoğun ilgi gördü.
-                              </p>
-                              <p style="margin-bottom: 1.5rem;">
-                                Leke çıkarıcı gücü yüksek, aynı zamanda cilt dostu yeni Sio yüzey temizleyicileri raflardaki yerini aldı. Hem daha az kimyasal hem daha fazla temizlik.
-                              </p>`
-                }
-            };
-        
-            const urlParams = new URLSearchParams(window.location.search);
-            const id = urlParams.get('id') || "1";
+        function renderNews(lang) {
+            let id = "1";
+            if (window.location.hash && window.location.hash.includes('id=')) {
+                id = window.location.hash.split('id=')[1].split('&')[0];
+            } else {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('id')) id = urlParams.get('id');
+            }
             const data = newsData[id];
         
             if(data) {
-                document.getElementById("detail-cat").textContent = data.category;
-                document.getElementById("detail-title").textContent = data.title;
-                document.getElementById("detail-date").innerHTML = '<i class="ph ph-calendar-blank" style="font-size: 1.2rem; color: var(--color-brand-red);"></i> ' + data.date;
+                const localized = data[lang] || data['tr'];
+                document.getElementById("detail-cat").textContent = localized.category;
+                document.getElementById("detail-title").textContent = localized.title;
+                document.getElementById("detail-date").innerHTML = '<i class="ph ph-calendar-blank" style="font-size: 1.2rem; color: var(--color-brand-red);"></i> ' + localized.date;
                 document.getElementById("detail-img").src = data.image;
-                document.getElementById("detail-content").innerHTML = data.content;
+                document.getElementById("detail-content").innerHTML = localized.content;
             }
+
+            // Update sidebar
+            ['2', '3', '6'].forEach(sid => {
+                const sData = newsData[sid];
+                if(sData && document.getElementById('sidebar-title-'+sid)) {
+                    const sLoc = sData[lang] || sData['tr'];
+                    document.getElementById('sidebar-title-'+sid).textContent = sLoc.title.substring(0, 45) + '...';
+                    document.getElementById('sidebar-date-'+sid).innerHTML = '<i class="ph ph-calendar-blank"></i> ' + sLoc.date;
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentLang = localStorage.getItem('bilesim_lang') || 'tr';
+            renderNews(currentLang);
+        });
+
+        window.addEventListener('languageChanged', function(e) {
+            renderNews(e.detail.lang);
+        });
+
+        window.addEventListener('hashchange', function() {
+            const currentLang = localStorage.getItem('bilesim_lang') || 'tr';
+            renderNews(currentLang);
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
     </script>
+
+    
+    <!-- Cookie Overlay (Blocks interaction) -->
+    <div id="cookieConsentOverlay" class="cookie-overlay"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <div class="cookie-consent-inner container">
+            <div class="cookie-consent-content">
+                <i class="ph-fill ph-cookie cookie-icon"></i>
+                <p>Sitemizin işlevselliği için çerezler kullanılmaktadır. Teknik olarak tutulması gerekmeyen ancak size daha iyi kullanıcı tecrübesi ve kişiye özel teklif sunmamıza, internet trafiğimizi analiz etmemize ve sosyal medya özellikleri sağlamamıza izin veren çerezler bulunmaktadır ve bunlar ancak onay vermeniz halinde kullanılacaktır.</p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button class="btn-cookie-outline" onclick="openCookieSettings()"><i class="ph ph-sliders-horizontal"></i> Tercihleri Özelleştir</button>
+                <button class="btn-cookie-outline" onclick="saveCookies('essential')"><i class="ph ph-shield-check"></i> Yalnızca Zorunlu</button>
+                <button class="btn-cookie-primary" onclick="saveCookies('all')"><i class="ph ph-check"></i> Hepsini Kabul Et</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Cookie Button -->
+    <button id="floatingCookieBtn" class="floating-cookie-btn" onclick="openCookieSettings()" aria-label="Çerez Politikası">
+        <i class="ph ph-cookie"></i>
+    </button>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookieSettingsModal" class="cookie-settings-modal">
+        <div class="cookie-settings-content">
+            <div class="cookie-settings-header">
+                <h3><i class="ph-fill ph-cookie"></i> Çerez Tercihleri</h3>
+                <button class="cookie-settings-close" onclick="closeCookieSettings()"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="cookie-settings-body">
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-shield-check" style="color: var(--color-brand-red);"></i> Zorunlu Çerezler <span class="badge-essential">Her zaman aktif</span></h4>
+                        <p>Oturum yönetimi, güvenlik ve temel işlevler. Devre dışı bırakılamaz.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider round disabled"></span>
+                    </label>
+                </div>
+                
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-chart-line" style="color: var(--color-brand-red);"></i> Analitik Çerezler</h4>
+                        <p>Sayfa görüntülemeleri, ziyaretçi kaynakları ve kullanıcı davranışı ölçümü.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggleAnalytics">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-megaphone" style="color: var(--color-brand-red);"></i> Pazarlama & Reklam Çerezleri</h4>
+                        <p>Reklam performansı ve yeniden hedefleme.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggleMarketing">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="cookie-toggle-row">
+                    <div class="cookie-toggle-info">
+                        <h4><i class="ph ph-headset" style="color: var(--color-brand-red);"></i> Destek Araçları</h4>
+                        <p>Canlı müşteri destek sohbet aracı widget'ı.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggleSupport">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-settings-footer">
+                <button class="btn-cookie-primary w-100" style="width: 100%; justify-content: center;" onclick="saveCustomCookies()">Seçimi Kaydet</button>
+            </div>
+        </div>
+    </div>
+    <!-- Page Transitions -->
+    <script src="js/page-transition.js"></script>
 </body>
 </html>
