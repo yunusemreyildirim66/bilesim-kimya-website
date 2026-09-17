@@ -665,7 +665,10 @@ function translatePage(lang) {
 
     // Update active state in dropdown
     const btn = document.getElementById('langBtn');
-    btn.innerHTML = lang.toUpperCase() + ' <i class="ph ph-caret-down"></i>';
+    if (btn) {
+        const flagMap = { 'tr': 'tr', 'en': 'gb', 'ar': 'sa', 'ru': 'ru' };
+        btn.innerHTML = `<span class="fi fi-${flagMap[lang]}"></span> ` + lang.toUpperCase() + ' <i class="ph ph-caret-down"></i>';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
